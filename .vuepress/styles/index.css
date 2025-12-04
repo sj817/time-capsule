@@ -1,0 +1,39 @@
+/* 让文章列表卡片整体可点击 */
+.page-blog-list .post-list .post-info-wrapper {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.page-blog-list .post-list .post-info-wrapper:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* 让整个卡片区域可点击 */
+.page-blog-list .post-list .post-info-wrapper {
+  position: relative;
+}
+
+.page-blog-list .post-list .post-info .title a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+/* 保持标题链接在最上层 */
+.page-blog-list .post-list .post-info .title a {
+  position: relative;
+  z-index: 2;
+}
+
+/* 分类和标签保持可点击 */
+.page-blog-list .post-list .categories a,
+.page-blog-list .post-list .tags a {
+  position: relative;
+  z-index: 2;
+}
+
